@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chúc mừng sinh nhật Dumping 🎉</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: url("anhne.jpg") no-repeat center center fixed;
+      background-size: cover;
+      overflow-x: hidden;
+      color: #333;
+      height: 100%;
+    }
+
+    .card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 40px 30px;
+      text-align: left;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 40px;
+      color: #ff5e78;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #5c57d6;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #333;
+      white-space: pre-line;
+    }
+
+    #playButton {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #ff7e94;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nút phát nhạc -->
+  <button id="playButton">🎵 Bật nhạc Happy Birthday</button>
+  <audio id="bgMusic" loop>
+    <source src="nhacsnne.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Nội dung -->
+  <div class="card">
+    <h1>🎂 Happy 18 Dumping! 🛫</h1>
+    <h2>Một chiếc Dumpling biết đi!</h2>
+    <p>
+Ayzozo vậy là ngươi cũng chính thức "lên đời" rồi ha. Người ta kêu 18 tuổi là cột mốc xịn xò lắm, nên là nay ta hy sinh sến sến một bữa vậy 🤧
+
+18 năm trước thì khóc oee oee, zờ thì là một chiếc Dumpling sắp xuất lò. Vậy là từ hôm nay ngươi chính thức không chỉ đủ tuổi lái xe, mà còn đủ tuổi để tự bơi giữa đời.
+
+Có thể ngươi không nhớ, hồi lớp 7 tụi mình còn ngồi tranh nhau quyển vở tại ta viết thơ nma không cho ngươi đọc, hay cả những lần nói ngôn ngữ riêng của 2 đứa làm cả lớp ngớ người...Giờ thì ngươi sắp bay một lèo mấy nghìn cây số, để lại ta với đống ký ức vô tree nhưng siêu quý. Ayza, ngươi đi rồi chắc ta sẽ buồn nhiều chút đấy 🤏🏻… (chỉ là chắc thôi 🙄)
+
+Viết một hồi, túm cái váy lại cũng là ta chúc ngươi ở tuổi 18:
+🌟 Rực rỡ như nắng Paris  
+💪 Dũng cảm bước tiếp con đường mình chọn dù ai nói gì đi nữa  
+😂 Và sống thật vui, thật chất, thật cháy như thể cả vũ trụ này sinh ra là để ngươi chill trong đó vậy á  
+
+Cảm ơn vì đã luôn là ánh sáng (dù hơi chói) trong cuộc sống của ta (ee nói thiệt đó đừng có kêu sến 🥺)  
+
+🎂 Sinh nhật vui vẻ nhaaa đồ bánh bao biết đi mà ta siêu quý 😘
+    </p>
+  </div>
+
+  <!-- Script phát nhạc -->
+  <script>
+    const playButton = document.getElementById('playButton');
+    const bgMusic = document.getElementById('bgMusic');
+
+    playButton.addEventListener('click', function () {
+      bgMusic.play();
+      playButton.innerText = "🎵 Nhạc đang phát...";
+      playButton.disabled = true;
+      playButton.style.opacity = 0.7;
+    });
+  </script>
+</body>
+</html>
